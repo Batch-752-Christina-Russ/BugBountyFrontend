@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "BugBountyFE"
+    }
+  },
+  "defaultProject": "BugBountyFE",
+  "cli": {
+    "analytics": false
+  }
 }
