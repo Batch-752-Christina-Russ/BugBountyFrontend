@@ -1,0 +1,28 @@
+<table>
+    <thead>
+        <tr>
+            <th>
+                Rank
+            </th>
+            <th>
+                Username
+            </th>
+            <th>
+                Points
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let user of topTenList; let i = index'>
+            <td>
+                {{i + 1}}
+            </td>
+            <td>
+                {{user.username}}
+            </td>
+            <td>
+                {{user.points}}
+            </td>
+        </tr>
+    </tbody>
+</table>
