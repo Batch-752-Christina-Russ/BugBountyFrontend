@@ -1,8 +1,8 @@
 import { Role } from './Role';
 
-export class Users {
+export class User {
 
-    public users_id : number;
+    public id : number;
     public username : string;
     public password : string;
     public points : number;
@@ -14,7 +14,7 @@ export class Users {
                 input_points : number, 
                 input_role : Role) {
                     
-        this.users_id = input_user_id;
+        this.id = input_user_id;
         this.username = input_username;
         this.password = input_password;
         this.points = input_points;
