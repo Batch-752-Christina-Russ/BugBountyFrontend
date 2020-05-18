@@ -1,1 +1,40 @@
 <p>login works!</p>
+<section id="mainContainer">
+    <div id="login" class="login">
+        <div id="logo">
+            <img src="/assets/img/logo bug tracker.png" height="486px" width="395px">
+        </div>
+        <div id="loginForm" >
+            <form (ngSubmit)="login()" #loginForm="ngForm">
+                <div class="form-row">
+                    <label for="inputUsername">Username</label> 
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <i class="fa fa-user"></i>
+                            </div>
+                        </div>                      
+                    <input type="text" class="form-control" name="inputUsername" id="inputUsername" placeholder="Username">
+                </div>
+                </div>
+                <div class="form-row">
+                    <label for="inputPassword">Password</label>
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <i class="fa fa-key"></i>
+                            </div>
+                    <div>
+                        <div *ngIf="bad" class="alert alert-danger">Username or Password incorrect</div>
+                    </div>        
+                    </div>  
+                    <input type="password" class="form-control" name="inputPassword" id="inputPassword" placeholder="Password">
+                    </div>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-success btn-lg btn-block">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

@@ -9,5 +9,4 @@ export class Role {
         this.role_id = input_role_id;
         this.role_name = input_role_name;
     }
-
 }

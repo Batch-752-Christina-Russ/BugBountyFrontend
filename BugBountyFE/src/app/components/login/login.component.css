@@ -1,0 +1,43 @@
+section{
+    background-image: url("/assets/img/dos.png");
+    opacity: .6;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+.login{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+  
+div{
+    display: flex;
+}
+
+#logo{
+    float: left;
+    width: 400px;
+    margin-right: 80px;
+}
+
+form{
+    height: 310px;
+    width: 500px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.4);
+    font-size: 1.5em;
+}
+
+form>div{
+    padding-bottom: 16px;
+}
+
+label{
+    color: white;
+}
