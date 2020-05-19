@@ -1,34 +1,39 @@
+import { User } from './User';
+
 export class BugReport{
 
-report_id : number;
-applicationName : string;
-reporter : number;
-resolver : number;
+id : number;
+reporter : User;
+resolver : User;
+application : string;
 location: string;
-submissionDate : Date;
-stepsToReproduce : string;
 description : string;
+steps : string;
 severity : string;
+date : Date;
+status : string;
 
 constructor(input_report_id : number, 
-            input_applicationName : string, 
-            input_reporter : number, 
-            input_resolver : number,
+            input_reporter : User, 
+            input_resolver : User,
+            input_applicationName : string,  
             input_location : string,
-            input_submissionDate : Date,
-            input_stepsToReproduce : string,
             input_description : string,
-            input_severity : string) {
+            input_stepsToReproduce : string,
+            input_severity : string,
+            input_submissionDate : Date,
+            input_status : string) {
 
-    this.report_id = input_report_id;
-    this.applicationName = input_applicationName;
+    this.id = input_report_id;
+    this.application = input_applicationName;
     this.reporter = input_reporter;
     this.resolver = input_resolver;
     this.location = input_location;
-    this.submissionDate = input_submissionDate;
-    this.stepsToReproduce = input_stepsToReproduce;
+    this.date = input_submissionDate;
+    this.steps = input_stepsToReproduce;
     this.description = input_description;
     this.severity = input_severity;
+    this.status = input_status;
 
 }
 
