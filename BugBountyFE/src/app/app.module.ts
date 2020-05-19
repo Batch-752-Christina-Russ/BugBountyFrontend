@@ -9,13 +9,17 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
+import { ApproveDenyBugComponent } from './components/approve-deny-bug/approve-deny-bug.component';
+import { ApproveDenyItemComponent } from './components/approve-deny-item/approve-deny-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    ApproveDenyBugComponent,
+    ApproveDenyItemComponent
   ],
   imports: [
     BrowserModule,
