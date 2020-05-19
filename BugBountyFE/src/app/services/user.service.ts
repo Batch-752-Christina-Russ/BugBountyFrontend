@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { analyzeAndValidateNgModules } from '@angular/compiler';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { User } from '../models/User';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -9,11 +11,18 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class UserService {
 
   private userUrl:String = 'http://localhost:8080/user';
+  
+  private rank : Number;
 
-  constructor(private http:HttpClient) { }
+  constructor(private client : HttpClient) { }
 
   getRank(username: String) : Observable<any>{
-    return this.http.get<any>(`${this.userUrl}/userrank/${username}`);
+    return this.client.get<any>(`${this.userUrl}/userrank/${username}`);
   
   }
+  
+  getLeaderboard() : Observable<User[]> {    
+    return this.client.get('http://localhost:8080/user/topten') as Observable<User[]>;
+  }
+
 }

@@ -1,18 +1,44 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
+# git ls-files --others --exclude-from=.git/info/exclude
+# Lines that start with '#' are comments.
+# For a project mostly in C, the following would be a good set of
+# exclude patterns (uncomment them if you want to use them):
+# *.[oa]
+# *~
+# .git/info/exclude
+
+**/pull_request_template.md
+**/issue_template.md
+**/target/
+**/bin/
+**/META-INF/**
+
+#Eclipse
+**/.metadata
+**/.project
+**/.settings/
+**/.classpath
+**/.recommenders/**
+**/Servers
+**/.springBeans
+
+#IDEA
+**/.idea/
+**/*.iml
+**/test-output/
+#AngularJS
+**/.tern-project
+
+#Mac
+.DS_Store
+/.recommenders/
 
 # compiled output
 /dist
 /tmp
 /out-tsc
-# Only exists if Bazel was run
-/bazel-out
 
 # dependencies
 /node_modules
-
-# profiling files
-chrome-profiler-events*.json
-speed-measure-plugin*.json
 
 # IDEs and editors
 /.idea
@@ -29,7 +55,6 @@ speed-measure-plugin*.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-.history/*
 
 # misc
 /.sass-cache
@@ -37,9 +62,17 @@ speed-measure-plugin*.json
 /coverage
 /libpeerconnection.log
 npm-debug.log
-yarn-error.log
 testem.log
 /typings
+yarn-error.log
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+# MyFiles
+credentials.properties
+application.properties
 
 # System Files
 .DS_Store
