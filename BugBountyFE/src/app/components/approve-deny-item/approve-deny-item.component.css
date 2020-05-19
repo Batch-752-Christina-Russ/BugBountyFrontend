@@ -1,5 +1,8 @@
-
-.steps{
+.card {
+    margin-bottom: 15px;
+    height:50vh;
+}
+/* .steps{
     background-color: lightgray;
     margin-bottom: 1px;
 }
@@ -12,7 +15,7 @@
 
 .cards-shadow{
     box-shadow: 1px 1px 6px lightslategrey;
-}
+} */
 
 #card-btn{
     float: left;
