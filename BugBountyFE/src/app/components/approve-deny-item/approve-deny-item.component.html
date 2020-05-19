@@ -1,0 +1,32 @@
+   <!-- <div class="card cards ">
+        <div class="card-header text-white bg-dark">{{bugReport.application}}</div>
+        <div class="card-body steps">
+            <h6 class="card-title text-danger">Severity: <strong>{{ bugReport.severity }} </strong></h6>
+            <h6 class="card-title text-primary">Desc:</h6>
+            <p class="card-text te">{{ bugReport.description | slice:0:100 }}</p>
+            <h6 class="card-title text-primary">Steps</h6>
+            <p class="card-text">{{ bugReport.steps | slice:0:100 }}</p>    
+        </div>
+        <div id="card-btn">
+            <button (click)="approve()" class="btn btn-success">Approve</button>
+            <button (click)="deny()" class="btn btn-danger">Deny</button>
+        </div>
+    </div>  -->
+
+<div class="card" style="width: 18rem;">
+    <div class="card-header text-white bg-dark">{{bugReport.application}}</div>
+    <div class="card-body">
+        <h6 class="card-title text-danger">Severity: <strong>{{ bugReport.severity }} </strong></h6>
+        <h6 class="card-title text-primary">Desc:</h6>
+        <p class="card-text te">{{ bugReport.description | slice:0:100 }}</p>
+        <h6 class="card-title text-primary">Steps</h6>
+        <p class="card-text">{{ bugReport.steps | slice:0:100 }}</p>    
+
+    </div>
+    <div id="card-btn" class="text-center">
+        <button (click)="approve()" class="btn btn-success">Approve</button>
+        <button (click)="deny()" class="btn btn-danger">Deny</button>
+    </div>
+</div>
+      
+    
