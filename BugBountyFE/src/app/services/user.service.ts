@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
+
+import { Role } from '../models/Role';
 import { Observable } from 'rxjs';
 import { analyzeAndValidateNgModules } from '@angular/compiler';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { User } from '../models/User';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +13,9 @@ import { HttpClient } from '@angular/common/http';
 export class UserService {
 
   private userUrl:String = 'http://localhost:8080/user';
-  
+  constructor(
+    private client : HttpClient
+  ) { }
   private rank : Number;
 
   constructor(private client : HttpClient) { }
@@ -24,5 +28,4 @@ export class UserService {
   getLeaderboard() : Observable<User[]> {    
     return this.client.get('http://localhost:8080/user/topten') as Observable<User[]>;
   }
-
 }

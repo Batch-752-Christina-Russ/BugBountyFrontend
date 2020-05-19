@@ -4,7 +4,9 @@ export class AppPage {
   navigateTo(): Promise<unknown> {
     return browser.get(browser.baseUrl) as Promise<unknown>;
   }
-
+  navigateToLogin(): Promise<unknown> {
+    return browser.get('http://localhost:4200/')as Promise<unknown>;
+  }
   getTitleText(): Promise<string> {
     return element(by.css('app-root .content span')).getText() as Promise<string>;
   }
