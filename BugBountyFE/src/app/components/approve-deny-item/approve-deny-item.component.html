@@ -1,10 +1,11 @@
-<div class="card">
+<div class="card brcard">
     <div class="containter">
-        <h3>{{bugReport.id}}</h3>
         <p>App: {{bugReport.application}}</p><br>
-        <p>Desc: {{bugReport.description}}</p><br>
-        <p>Steps: {{bugReport.steps}}</p><br>
-        <p>Severity: {{bugReport.severity}}</p><br>
+        <label for="desc">Desc:</label>
+        <p class="brp" id="desc">{{bugReport.description}}</p><br>
+        <label for="steps">Steps:</label>
+        <p class="brp" id="steps">{{bugReport.steps}}</p><br>
+        <p >Severity: {{bugReport.severity}}</p><br>
         <button (click)="approve()" class="btn btn-success">Approve</button>
         <button (click)="deny()" class="btn btn-danger">Deny</button>
     </div>

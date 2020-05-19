@@ -16,16 +16,12 @@ export class BugReportService {
 
   private brUrl:string = 'http://localhost:8080/bugreport'
   
-  // getPendingBugReports():Observable<BugReport[]>{
-  //   return this.http.get<BugReport[]>('url here');
-  // }
-
-
-  approve(bugReport:BugReport):Observable<any>{
-    return this.http.post<any>(`${this.brUrl}/`, bugReport, this.httpOptions);
+  getPendingBugReports():Observable<BugReport[]>{
+    return this.http.get<BugReport[]>(`${this.brUrl}/pending`);
   }
 
-  deny(bugReport:BugReport):Observable<any>{
-    return this.http.post<any>(`${this.brUrl}/`, bugReport, this.httpOptions);
+  resolve(bugReport:BugReport):Observable<any>{
+    return this.http.post<any>(`${this.brUrl}/approvedeny`, bugReport, this.httpOptions);
   }
+
 }

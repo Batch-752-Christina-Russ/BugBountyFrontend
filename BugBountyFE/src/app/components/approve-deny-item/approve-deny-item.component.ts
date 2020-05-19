@@ -17,19 +17,17 @@ export class ApproveDenyItemComponent implements OnInit {
 
   approve():void{
     this.bugReport.status = 'open';
-    this.brs.approve(this.bugReport).subscribe(res => {
-
+    this.brs.resolve(this.bugReport).subscribe(res => {
     },err => {
-      console.log('Ya dun goofd');
+      console.log('Error');
     });
   }
 
   deny():void{
     this.bugReport.status = 'delete';
-    this.brs.deny(this.bugReport).subscribe(res => {
-
+    this.brs.resolve(this.bugReport).subscribe(res => {
     },err => {
-      console.log('Ya dun goofd');
+      console.log('Error');
     });
   }
 

@@ -1,0 +1,12 @@
+.brcard{
+    width: 400px;
+    float: left;
+    margin: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.brp{
+    overflow: auto;
+    height: 100px;
+    width: 375px;
+}

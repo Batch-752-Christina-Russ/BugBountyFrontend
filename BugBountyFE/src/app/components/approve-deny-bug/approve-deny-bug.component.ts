@@ -17,48 +17,9 @@ export class ApproveDenyBugComponent implements OnInit {
   constructor(private brs:BugReportService) { }
 
   ngOnInit(): void {
-    // this.brs.getPendingBugReports().subscribe(bugReports => {
-    //   this.bugReports = bugReports;
-    // })
-    
-    this.bugReports = [
-      {
-        id: 1,
-        reporter: this.rep,
-        resolver: null,
-        application: 'Donkeys',
-        location: 'DonkeyService',
-        description: 'Missing donkeys',
-        steps: 'Open app',
-        severity: 'Critical',
-        date: null,
-        status: 'pending'
-      },
-      {
-        id: 2,
-        reporter: this.rep,
-        resolver: null,
-        application: 'Donkeys2',
-        location: 'DonkeyService2',
-        description: 'Missing donkeys2',
-        steps: 'Open app2',
-        severity: 'Critical2',
-        date: null,
-        status: 'pending'
-      },
-      {
-        id: 3,
-        reporter: this.rep,
-        resolver: null,
-        application: 'Donkeys3',
-        location: 'DonkeyService3',
-        description: 'Missing donkeys3',
-        steps: 'Open app3',
-        severity: 'Critical3',
-        date: null,
-        status: 'pending'
-      }
-    ]
+    this.brs.getPendingBugReports().subscribe(bugReports => {
+      this.bugReports = bugReports;
+    })
   }
 
 }
