@@ -7,11 +7,15 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
+import { ApproveDenyBugComponent } from './components/approve-deny-bug/approve-deny-bug.component';
+import { ApproveDenyItemComponent } from './components/approve-deny-item/approve-deny-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    ApproveDenyBugComponent,
+    ApproveDenyItemComponent
   ],
   imports: [
     BrowserModule,
