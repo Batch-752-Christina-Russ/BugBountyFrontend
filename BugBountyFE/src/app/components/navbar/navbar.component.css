@@ -1,0 +1,43 @@
+nav{
+    height: 92px;
+    background-color: gray;
+}
+
+#tbarLogo{
+    margin: 0;
+    padding-left: 40px;
+    min-width: 280px;
+    display: inline;
+}
+
+#tbarLogo>img{
+    height: 100px;
+    width: 350px;
+}
+
+#tbarOpt{
+    float: right;
+    width: 800px;
+    padding-top: 20px;
+}
+
+#tbarOpt>h1{
+    font-style: normal;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    text-shadow: 3px 3px 2px black;
+    display: inline;
+    padding-right: 100px;
+}
+
+#tbarOpt>a{
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+#tbarOpt>a>button{
+    margin-bottom: 20px;
+}
+
+
+
