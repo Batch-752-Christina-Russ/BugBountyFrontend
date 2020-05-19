@@ -1,0 +1,65 @@
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                id
+            </th>
+            <th>
+                reporter
+            </th>
+            <th>
+                application
+            </th>
+            <th>
+                location
+            </th>
+            <th>
+                description
+            </th>
+            <th>
+                steps
+            </th>
+            <th>
+                severity
+            </th>
+            <th>
+                date
+            </th>
+            <th>
+                status
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let Bug of BugReports">
+            <td>
+                {{Bug.id}}
+            </td>
+            <td>
+                {{Bug.reporter.username}}
+            </td>
+            <td>
+                {{Bug.application}}
+            </td>
+            <td>
+                {{Bug.location}}
+            </td>
+            <td>
+                {{Bug.description}}
+            </td>
+            <td>
+                {{Bug.steps}}
+            </td>
+            <td>
+                {{Bug.severity}}
+            </td>
+            <td>
+            {{Bug.date | date:'yyyy-MM-dd'}}
+            </td>
+            <td>
+                {{Bug.status}}
+            </td>
+        </tr>
+    </tbody>
+</table>
