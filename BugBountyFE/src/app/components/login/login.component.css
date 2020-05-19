@@ -13,7 +13,7 @@ section{
     justify-content: center;
     align-items: center;
 }
-  
+ 
 div{
     display: flex;
 }
@@ -25,7 +25,7 @@ div{
 }
 
 form{
-    height: 310px;
+    height: 330px;
     width: 500px;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 20px;
@@ -35,9 +35,15 @@ form{
 }
 
 form>div{
-    padding-bottom: 16px;
+    padding-bottom: 10px;
 }
 
 label{
     color: white;
+}
+
+#error{
+    margin: 4px;
+    padding: 4px;
+    font-size: medium;
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { LoginService } from '../../services/login.service';
+import { Router } from '@angular/router';
 
 import { Role } from '../../models/Role';
 import { User } from '../../models/User';
@@ -14,30 +15,34 @@ import { User } from '../../models/User';
 })
 export class LoginComponent implements OnInit {
 
-  public users_id : number;
   public username : string;
   public password : string;
-  public points : number;
-  public role : Role;
   public user : User; 
-  
-  public msj :boolean = false;
+  public error:string = null;
 
-  constructor(private http: HttpClient) { }
+  public message :boolean = false;
+
+  constructor(private http: HttpClient, private loginService: LoginService, private router:Router) { }
 
   public login(): void{
-    this.LoginService.login(this.username, this.password)
+    this.loginService.login(this.username, this.password)
       .subscribe(
         result => {
+          console.log(result);
           if(result == null){
-            this.msj = true;
-          }else{            
-            //this.getStudent(result); 
+            this.message = true;
+          }else{      
+            console.log(result);
+            //sessionStorage.setItem("id", result.id.toString());
+            sessionStorage.setItem("Username", result.username);
+            sessionStorage.setItem("Role", result.role.name); 
+            
+            this.router.navigate(['home']);
           }
         },
         error => {
           console.log(error);
-          this.msj = true;
+          this.message = true;
         }
       );
   }

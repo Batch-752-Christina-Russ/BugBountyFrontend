@@ -20,5 +20,4 @@ export class User {
         this.points = input_points;
         this.role = input_role;
     }
-
 }
