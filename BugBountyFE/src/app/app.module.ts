@@ -11,6 +11,7 @@ import { UserRankComponent } from './components/user-rank/user-rank.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { LeaderboardComponent } from './components/leaderboard/leaderboard.component';
+import { ResolveComponent } from './components/resolve/resolve.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { LeaderboardComponent } from './components/leaderboard/leaderboard.compo
     UserRankComponent,
     NavbarComponent,
     HomeComponent,
-    LeaderboardComponent
+    LeaderboardComponent,
+    ResolveComponent
   ],
   imports: [
     BrowserModule,
