@@ -27,3 +27,7 @@
 #card-btn>button{
      margin-right: 10px;
 }
+
+.modal-body{
+    overflow-wrap: break-word;
+}

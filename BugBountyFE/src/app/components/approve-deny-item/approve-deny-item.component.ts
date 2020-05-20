@@ -1,6 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 import { BugReport } from 'src/app/models/BugReport';
 import { BugReportService } from 'src/app/services/bug-report.service';
+import { EventEmitter } from 'protractor';
+import { type } from 'os';
 
 @Component({
   selector: 'app-approve-deny-item',
@@ -10,6 +12,7 @@ import { BugReportService } from 'src/app/services/bug-report.service';
 export class ApproveDenyItemComponent implements OnInit {
 
   @Input() bugReport:BugReport;
+  @ViewChild('card') card:ElementRef;
   constructor(private brs:BugReportService) { }
 
   ngOnInit(): void {
@@ -18,6 +21,7 @@ export class ApproveDenyItemComponent implements OnInit {
   approve():void{
     this.bugReport.status = 'open';
     this.brs.resolve(this.bugReport).subscribe(res => {
+      this.card.nativeElement.style.display='none';
     },err => {
       console.log('Error');
     });
