@@ -1,36 +1,41 @@
 
-<table >
+<div class = "panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Open Bugs</h3>
+    </div>
+<table class = "table table-hover">
     <thead>
         <tr>
             <th>
-                id
+                ID
             </th>
             <th>
-                reporter
+                Reporter
             </th>
             <th>
-                application
+                Application
             </th>
             <th>
-                location
+                Location
             </th>
             <th>
-                description
+                Description
             </th>
             <th>
-                steps
+                Steps
             </th>
             <th>
-                severity
+                Severity
             </th>
             <th>
-                date
+                Date
             </th>
-            <th>
-                status
+            <th >
+                Details
             </th>
         </tr>
     </thead>
+    <div class="panel-body">
     <tbody>
         <tr *ngFor="let Bug of BugReports">
             <td>
@@ -62,4 +67,6 @@
             </td>
         </tr>
     </tbody>
+    </div>
 </table>
+</div>

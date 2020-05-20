@@ -21,13 +21,14 @@ export class OpenBugsComponent implements OnInit {
   ngOnInit(): void {
 
     this.viewOpenBugs();
+
     // this.inputBugReport();
   }
   
   
   BugReports : BugReport[];
 
-
+ //Dummy data!!
   inputBugReport(){
   let roles1:Role = new Role(1, "user");
   let roles2:Role = new Role(2, "admin");

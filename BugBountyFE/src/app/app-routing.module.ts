@@ -6,7 +6,8 @@ import { OpenBugsComponent } from './components/open-bugs/open-bugs.component';
 
 
 const routes: Routes = [
-  { path: '', component:LoginComponent, pathMatch: 'full' },
+  { path: '', component:LoginComponent },
+  { path: 'login', component:LoginComponent, pathMatch: 'full' },
   { path: 'home', component:HomeComponent },
   { path: 'index', component:LoginComponent },
   {path : 'open', component:OpenBugsComponent}
