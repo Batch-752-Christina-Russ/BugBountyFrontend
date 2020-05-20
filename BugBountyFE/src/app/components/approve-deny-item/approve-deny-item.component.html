@@ -13,7 +13,7 @@
         </div>
     </div>  -->
 
-<div class="card" style="width: 18rem;">
+<div #card class="card" style="width: 18rem;">
     <div class="card-header text-white bg-dark" >{{bugReport.application}}</div>
     <div class="card-body">
         <h6 class="card-title text-danger">Severity: <strong>{{ bugReport.severity }} </strong></h6>
@@ -49,6 +49,10 @@
             <p class="card-text te">{{ bugReport.description }}</p>
             <h6 class="card-title text-primary">Steps:</h6>
             <p class="card-text">{{ bugReport.steps }}</p> 
+            <h6 class="card-title text-primary">Location:</h6>
+            <p class="card-text">{{bugReport.location}}</p>
+            <h6 class="card-title text-primary">Reporter:</h6>
+            <p class="card-text">{{bugReport.reporter.username}}</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

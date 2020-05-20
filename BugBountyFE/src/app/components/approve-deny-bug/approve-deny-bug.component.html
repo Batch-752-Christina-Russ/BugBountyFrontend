@@ -2,7 +2,7 @@
 <div class="container">
    <div class="row">
       <div *ngFor="let bugReport of bugReports" class="col-lg-4"> 
-            <app-approve-deny-item [bugReport]="bugReport"> </app-approve-deny-item> 
+            <app-approve-deny-item [bugReport]="bugReport" (delete)='deleteCard($event, i)'> </app-approve-deny-item> 
       </div>      
    </div>
 </div> 
