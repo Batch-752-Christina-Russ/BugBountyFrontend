@@ -21,7 +21,8 @@ export class ApproveDenyItemComponent implements OnInit {
   approve():void{
     this.bugReport.status = 'open';
     this.brs.resolve(this.bugReport).subscribe(res => {
-      this.card.nativeElement.style.display='none';
+      console.log("resolved and deleting")
+      this.removeFromClient();
     },err => {
       console.log('Error');
     });
@@ -35,4 +36,7 @@ export class ApproveDenyItemComponent implements OnInit {
     });
   }
 
+  removeFromClient():void{
+    this.brs.deletePendingBugReport(this.bugReport.id);
+  }
 }

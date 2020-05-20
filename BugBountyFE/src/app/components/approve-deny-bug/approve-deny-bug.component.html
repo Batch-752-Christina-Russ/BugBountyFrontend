@@ -1,8 +1,8 @@
 <h1 id="approvedenytitle" class="title">Pending Bug Reports</h1>
 <div class="container">
    <div class="row">
-      <div *ngFor="let bugReport of bugReports" class="col-lg-4"> 
-            <app-approve-deny-item [bugReport]="bugReport" (delete)='deleteCard($event, i)'> </app-approve-deny-item> 
+      <div *ngFor="let bugReport of bugReports | keyvalue" class="col-sm-6 col-lg-4"> 
+            <app-approve-deny-item [bugReport]="bugReport.value"> </app-approve-deny-item> 
       </div>      
    </div>
 </div> 

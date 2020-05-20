@@ -11,7 +11,7 @@ import { User } from 'src/app/models/User';
 })
 export class ApproveDenyBugComponent implements OnInit {
 
-bugReports:BugReport[];
+  bugReports = {};
   role:Role = new Role(1, 'user');
   rep:User = new User(1, 'Derp', null, 2, this.role);
   constructor(private brs:BugReportService) { }
@@ -41,12 +41,13 @@ bugReports:BugReport[];
     // 'It is done ',
     // 'Lorem ipsum dolor.',
     // 'High', null, 'pending')]
+    this.brs.pendingBugReports.subscribe( bugReports => { 
+      this.bugReports = bugReports
+    });
     this.brs.getPendingBugReports().subscribe(bugReports => {
-      this.bugReports = bugReports;
+      bugReports.map(bugReport=>{
+        this.brs.addPendingBugReports(bugReport)
+      })
     })
-  }
-
-  deleteCard(event:any, i:any){
-
   }
 }
