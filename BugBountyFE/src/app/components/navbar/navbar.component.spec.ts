@@ -25,7 +25,7 @@ describe('NavbarComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should clear session with clicking logout', () => {
+  it('should clear session by using logout', () => {
     sessionStorage.setItem('Role', 'admin');
     component.logout();
     expect(sessionStorage.getItem('Role')).toBeFalsy;
