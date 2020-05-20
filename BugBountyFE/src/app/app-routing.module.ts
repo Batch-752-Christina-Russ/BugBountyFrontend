@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: '', component:LoginComponent, pathMatch: 'full' },
   { path: 'home', component:HomeComponent },
   { path: 'index', component:LoginComponent },
-  { path: 'manage', component:ApproveDenyBugComponent }
+  { path: 'pendingbug', component:ApproveDenyBugComponent }
 ];
 
 @NgModule({

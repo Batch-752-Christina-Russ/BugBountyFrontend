@@ -31,6 +31,8 @@ export class ApproveDenyItemComponent implements OnInit {
   deny():void{
     this.bugReport.status = 'delete';
     this.brs.resolve(this.bugReport).subscribe(res => {
+      //deletes too quickly
+      this.removeFromClient();
     },err => {
       console.log('Error');
     });
