@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NavbarComponent } from './navbar.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('NavbarComponent', () => {
   let component: NavbarComponent;
@@ -8,6 +9,7 @@ describe('NavbarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
       declarations: [ NavbarComponent ]
     })
     .compileComponents();
@@ -21,5 +23,11 @@ describe('NavbarComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should clear session with clicking logout', () => {
+    sessionStorage.setItem('Role', 'admin');
+    component.logout();
+    expect(sessionStorage.getItem('Role')).toBeFalsy;
   });
 });
