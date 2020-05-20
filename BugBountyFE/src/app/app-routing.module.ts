@@ -6,7 +6,7 @@ import { ApproveDenyBugComponent } from './components/approve-deny-bug/approve-d
 
 
 const routes: Routes = [
-  { path: '', component:LoginComponent, pathMatch: 'full' },
+  { path: '', redirectTo:'index', pathMatch: 'full' },
   { path: 'home', component:HomeComponent },
   { path: 'index', component:LoginComponent },
   { path: 'pendingbug', component:ApproveDenyBugComponent }

@@ -24,4 +24,5 @@ export class UserService {
   getLeaderboard() : Observable<User[]> {    
     return this.client.get('http://localhost:8080/user/topten') as Observable<User[]>;
   }
+  
 }
