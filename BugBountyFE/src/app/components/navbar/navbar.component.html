@@ -1,16 +1,13 @@
 <header>
     <nav class="navbar fixed-top">
         <div id="tbarLogo"> 
-            <img src="./assets/img/bt logo header.png">
+            <a routerLink="/home"><img src="./assets/img/bt logo header.png"></a>
         </div>
         <div id="tbarOpt">
-            <h1></h1>
-            <a routerLink="/index"><button class="btn btn-light">Home</button></a>
-            <a routerLink="/instructor"><button class="btn btn-light">Instructor</button></a>
-            <a routerLink="/courses"><button class="btn btn-light">Courses</button></a>
-            <a routerLink="/coursesmanage"><button class="btn btn-light">Manage Courses</button></a>        
-            <a><i class="fa fa-sign-out-alt"></i></a>
+            <a routerLink="/resolvebug"><button class="btn btn-light" *ngIf="cRole=='admin'">Resolve Reports</button></a>
+            <a routerLink="/pendingbug"><button class="btn btn-light" *ngIf="cRole=='admin'">Pending Reports</button></a>
+            <a routerLink="/reportbug"><button class="btn btn-light" *ngIf='cRole'>Report Bug</button></a>
+            <button class="btn btn-light" *ngIf='cRole' (click)="logout()">Logout</button>       
         </div> 
-      </nav>        
-        <router-outlet></router-outlet>  
+    </nav>         
 </header>
