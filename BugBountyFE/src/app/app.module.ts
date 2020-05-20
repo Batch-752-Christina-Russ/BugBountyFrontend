@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { DatePipe } from '@angular/common/';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,6 +13,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { LeaderboardComponent } from './components/leaderboard/leaderboard.component';
 import { OpenBugsComponent } from './components/open-bugs/open-bugs.component';
+
 
 
 @NgModule({
@@ -31,7 +33,7 @@ import { OpenBugsComponent } from './components/open-bugs/open-bugs.component';
     HttpClientModule
 
   ],
-  providers: [HttpClient],
+  providers: [HttpClient, DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

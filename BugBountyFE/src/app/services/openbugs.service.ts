@@ -12,18 +12,9 @@ export class OpenBugsService{
 
   constructor(private http: HttpClient) { }
 
-    // BugReport : Object;
-
-//   viewBugsUser(id: number): Observable<BugReport[]>{
-    
-//     return this.http.get(
-//       "http://localhost:8080/bugreport/" + id
-//     ) as Observable<BugReport[]>
-//   }
-
-  viewBugsAdmin(): Observable<BugReport[]>{
+  viewOpenBugs(): Observable<BugReport[]>{
     return this.http.get(
-      "/bugreport/status/pending"
+      "/bugreport/status/open"
     ) as Observable<BugReport[]>
   }
 
