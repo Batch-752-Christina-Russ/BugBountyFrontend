@@ -1,41 +1,22 @@
-    
-    <nav class="navbar navbar-expand-lg nav-link-white nav">
-        <a routerLink="/home"><img style="height: 4rem;"src="./assets/img/bt logo header.png" (click)="setClicked('/home')"></a>        
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>        
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav ml-auto" *ngIf="cRole=='admin'">
-            <li class="nav-item" [ngClass]="{'active': clicked=='/resolvebug'}">
-              <a class="nav-link" (click)="setClicked('/resolvebug')" routerLink="/resolvebug"><b>Resolve Reports </b></a>
-            </li>
-            <li class="nav-item" *ngIf="cRole=='admin'" [ngClass]="{'active': clicked=='/pendingbug'}">
-              <a class="nav-link" (click)="setClicked('/pendingbug')" routerLink="/pendingbug"><b>Pending Reports</b></a>
-            </li>
-            <li class="nav-item" *ngIf='cRole' [ngClass]="{'active': clicked=='/reportbug'}">
-              <a class="nav-link" (click)="setClicked('/reportbug')" routerLink="/reportbug"><b>Report Bug</b></a>
-            </li>
-            <li class="nav-item" *ngIf='cRole'>
-                <a class="nav-link" style="cursor:pointer;"(click)="logout()"><b>Logout</b></a>
-              </li>
-          </ul>
-        </div>
-      </nav>
-      
-    
-    
-    
-    
-    
-    
-    <!-- <nav class="navbar fixed-top">
-        <div id="tbarLogo"> 
-            <a routerLink="/home"><img src="./assets/img/bt logo header.png"></a>
-        </div>
-        <div id="tbarOpt">
-            <a routerLink="/resolvebug"><button class="btn btn-light" *ngIf="cRole=='admin'">Resolve Reports</button></a>
-            <a routerLink="/pendingbug"><button class="btn btn-light" *ngIf="cRole=='admin'">Pending Reports</button></a>
-            <a routerLink="/reportbug"><button class="btn btn-light" *ngIf='cRole'>Report Bug</button></a>
-            <a><button class="btn btn-light" *ngIf='cRole' (click)="logout()">Logout</button></a>   
-        </div> 
-    </nav>          -->
+<nav class="navbar navbar-expand-lg nav-link-white nav">
+  <a routerLink="/home"><img style="height: 4rem;"src="./assets/img/bt logo header.png" (click)="setClicked('/home')"></a>        
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>        
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav ml-auto" *ngIf="cRole=='admin'">
+      <li class="nav-item" [ngClass]="{'active': clicked=='/resolvebug'}">
+        <a class="nav-link" (click)="setClicked('/resolvebug')" routerLink="/resolvebug"><b>Resolve Reports </b></a>
+      </li>
+      <li class="nav-item" *ngIf="cRole=='admin'" [ngClass]="{'active': clicked=='/pendingbug'}">
+        <a class="nav-link" (click)="setClicked('/pendingbug')" routerLink="/pendingbug"><b>Pending Reports</b></a>
+      </li>
+      <li class="nav-item" *ngIf='cRole' [ngClass]="{'active': clicked=='/reportbug'}">
+        <a class="nav-link" (click)="setClicked('/reportbug')" routerLink="/reportbug"><b>Report Bug</b></a>
+      </li>
+      <li class="nav-item" *ngIf='cRole'>
+        <a class="nav-link" style="cursor:pointer;"(click)="logout()"><b>Logout</b></a>
+      </li>
+    </ul>
+  </div>
+</nav>
