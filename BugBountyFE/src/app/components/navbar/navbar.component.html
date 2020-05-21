@@ -4,8 +4,8 @@
       <span class="navbar-toggler-icon"></span>
     </button>        
   <div class="collapse navbar-collapse" id="navbarText">
-    <ul class="navbar-nav ml-auto" *ngIf="cRole=='admin'">
-      <li class="nav-item" [ngClass]="{'active': clicked=='/resolvebug'}">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item" *ngIf="cRole=='admin'" [ngClass]="{'active': clicked=='/resolvebug'}">
         <a class="nav-link" (click)="setClicked('/resolvebug')" routerLink="/resolvebug"><b>Resolve Reports </b></a>
       </li>
       <li class="nav-item" *ngIf="cRole=='admin'" [ngClass]="{'active': clicked=='/pendingbug'}">
