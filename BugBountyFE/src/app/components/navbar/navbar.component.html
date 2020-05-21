@@ -12,7 +12,7 @@
             <li class="nav-item" *ngIf="cRole=='admin'" [ngClass]="{'active': clicked=='/pendingbug'}">
               <a class="nav-link" (click)="setClicked('/pendingbug')" routerLink="/pendingbug"><b>Pending Reports</b></a>
             </li>
-            <li class="nav-item" *ngIf="cRole=='admin'" [ngClass]="{'active': clicked=='/reportbug'}">
+            <li class="nav-item" *ngIf='cRole' [ngClass]="{'active': clicked=='/reportbug'}">
               <a class="nav-link" (click)="setClicked('/reportbug')" routerLink="/reportbug"><b>Report Bug</b></a>
             </li>
             <li class="nav-item" *ngIf='cRole'>
