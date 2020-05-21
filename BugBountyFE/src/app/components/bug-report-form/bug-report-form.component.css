@@ -5,6 +5,7 @@
     margin-right:5%;
     text-align:center;
     font-size:25px;
+    
 }
 
 .panel-heading {
@@ -25,4 +26,8 @@
 
 .success-message{
     background-color: #F26925;
+}
+
+.container{
+    padding-top: 20px;
 }
