@@ -1,10 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { OpenBugsComponent } from './open-bugs.component';
-import { BugReport } from 'src/app/models/BugReport';
+import { BugReport } from '../../models/BugReport';
 import { DatePipe } from '@angular/common';
-import { Role } from 'src/app/models/Role';
-import { User } from 'src/app/models/User';
+import { Role } from '../../models/Role';
+import { User } from '../../models/User';
 
 
 describe('OpenBugsComponent', () => {

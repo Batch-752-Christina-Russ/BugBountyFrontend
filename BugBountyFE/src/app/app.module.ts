@@ -16,6 +16,7 @@ import { ApproveDenyBugComponent } from './components/approve-deny-bug/approve-d
 import { ApproveDenyItemComponent } from './components/approve-deny-item/approve-deny-item.component';
 import { BugReportFormComponent } from './components/bug-report-form/bug-report-form.component';
 import { OpenBugsComponent } from './components/open-bugs/open-bugs.component';
+import { OpenBugsItemComponent } from './components/open-bugs-item/open-bugs-item.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { OpenBugsComponent } from './components/open-bugs/open-bugs.component';
     ApproveDenyBugComponent,
     ApproveDenyItemComponent,
     BugReportFormComponent,
-    OpenBugsComponent
+    OpenBugsComponent,
+    OpenBugsItemComponent
   ],
   imports: [
     BrowserModule,
