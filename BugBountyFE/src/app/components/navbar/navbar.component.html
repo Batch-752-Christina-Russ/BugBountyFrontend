@@ -6,7 +6,7 @@
         <div id="tbarOpt">
             <a routerLink="/resolvebug"><button class="btn btn-light" *ngIf="cRole=='admin'">Resolve Reports</button></a>
             <a routerLink="/pendingbug"><button class="btn btn-light" *ngIf="cRole=='admin'">Pending Reports</button></a>
-            <a routerLink="/reportbug"><button class="btn btn-light" *ngIf='cRole'>Report Bug</button></a>
+            <a routerLink="/bug-report-form"><button class="btn btn-light" *ngIf='cRole'>Report Bug</button></a>
             <a><button class="btn btn-light" *ngIf='cRole' (click)="logout()">Logout</button></a>   
         </div> 
     </nav>         
