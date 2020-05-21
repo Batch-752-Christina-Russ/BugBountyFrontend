@@ -8,24 +8,14 @@
                 <div *ngIf="message" id="error" class="alert alert-danger">Username or Password incorrect</div>                
                 <div class="form-row">
                     <label for="Username">Username</label> 
-                    <div class="input-group mb-2">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text">
-                                <i class="fa fa-user"></i>
-                            </div>
-                        </div>                      
+                    <div class="input-group mb-2">                  
                         <input [(ngModel)]="username"  type="text" class="form-control" name="username" id="username" placeholder="Username">
                     </div>
                 </div>
 
                 <div class="form-row">
                     <label for="Password">Password</label>
-                    <div class="input-group mb-2">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text">
-                                <i class="fa fa-key"></i>
-                            </div>        
-                        </div>  
+                    <div class="input-group mb-2">                   
                         <input [(ngModel)]="password" type="password" class="form-control" name="password" id="password" placeholder="Password">
                     </div>
                 </div>

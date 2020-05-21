@@ -1,15 +1,23 @@
 section{
-    background-image: url("/assets/img/dos.png");
-    opacity: .6;
-    background-size: cover;
     height: 100vh;
-    width: 100vw;
+    display: block;
+    position: relative;
+}
+section::after{
+    content: "";
+    background-image: url("/assets/img/dos.png");
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
 }
 
 .login{
     display: flex;
     height: 100vh;
-    width: 100vw;
     justify-content: center;
     align-items: center;
 }
@@ -27,7 +35,7 @@ div{
 form{
     height: 330px;
     width: 500px;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 20px;
     padding: 30px;
     box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.4);
