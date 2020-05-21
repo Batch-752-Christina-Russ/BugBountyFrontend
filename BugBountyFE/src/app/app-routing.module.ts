@@ -4,12 +4,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { ApproveDenyBugComponent } from './components/approve-deny-bug/approve-deny-bug.component';
-import { ResolveComponent } from './components/resolve/resolve.component';
-import { LeaderboardComponent } from './components/leaderboard/leaderboard.component';
 import { BugReportFormComponent } from './components/bug-report-form/bug-report-form.component';
 import { OpenBugsComponent } from './components/open-bugs/open-bugs.component';
 import { LeaderboardComponent } from './components/leaderboard/leaderboard.component';
 import { UserRankComponent } from './components/user-rank/user-rank.component';
+import { ResolveComponent } from './components/resolve/resolve.component';
 
 const routes: Routes = [
   { path: '', redirectTo:'index', pathMatch: 'full' },
