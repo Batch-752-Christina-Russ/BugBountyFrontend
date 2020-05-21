@@ -11,7 +11,8 @@ import { UserRankComponent } from './components/user-rank/user-rank.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { LeaderboardComponent } from './components/leaderboard/leaderboard.component';
-
+import { ApproveDenyBugComponent } from './components/approve-deny-bug/approve-deny-bug.component';
+import { ApproveDenyItemComponent } from './components/approve-deny-item/approve-deny-item.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { LeaderboardComponent } from './components/leaderboard/leaderboard.compo
     UserRankComponent,
     NavbarComponent,
     HomeComponent,
-    LeaderboardComponent
+    LeaderboardComponent,
+    ApproveDenyBugComponent,
+    ApproveDenyItemComponent
   ],
   imports: [
     BrowserModule,

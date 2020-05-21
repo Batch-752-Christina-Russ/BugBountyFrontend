@@ -12,7 +12,6 @@ import { User } from '../models/User';
 export class UserService {
 
   private userUrl:String = 'http://localhost:8080/user';
-  
   private rank : Number;
 
   constructor(private client : HttpClient) { }
