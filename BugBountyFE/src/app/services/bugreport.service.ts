@@ -11,7 +11,6 @@ export class BugreportService {
   constructor(private client:HttpClient) { }
 
   resolve(bugId:number, username:String): void{
-
-      this.client.post<any>(`${this.URL}/resolve/${bugId}/${username}`, [bugId, username])
+    this.client.post<any>(`${this.URL}/resolve`, `{"id": ${bugId}, "username": "${username}"}` ,this.HttpOptions).subscribe();
   }
 }

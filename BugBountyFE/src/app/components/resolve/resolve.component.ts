@@ -15,6 +15,7 @@ export class ResolveComponent implements OnInit {
 
   resolveBug(bugId: number, username: String):void{
       this.bugreportService.resolve(bugId, username);
-  }
+      //console.log(JSON.stringify(`{id:${bugId}, username:${username}}`));
+    }
 
 }
