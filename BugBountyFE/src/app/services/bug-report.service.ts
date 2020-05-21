@@ -1,13 +1,16 @@
 import { Injectable } from '@angular/core';
+
 import { Observable } from 'rxjs';
 import { BugReport } from '../models/BugReport';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject } from 'rxjs';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class BugReportService {
+
   public pendingBugReports = new BehaviorSubject({});
 
   constructor(private http:HttpClient) { }
@@ -34,4 +37,20 @@ export class BugReportService {
     delete pendingBugReports[id];
     this.pendingBugReports.next(pendingBugReports);
   }
+
+
+  //Submit Bug Report
+  submitBugReport(bugreport:BugReport) {
+    //make http header
+    let header = new HttpHeaders().set('Content-Type', 'application/json');
+    console.log(JSON.stringify(bugreport));
+    this.http.post('http://localhost:8080/bugreport/new', JSON.stringify(bugreport), {headers:header}).subscribe(
+      () => { console.log("successful submit");},
+      () => { console.log("failed submission");}
+    );//end observable
+  }
+
+  
 }
+
+

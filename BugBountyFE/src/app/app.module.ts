@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +13,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LeaderboardComponent } from './components/leaderboard/leaderboard.component';
 import { ApproveDenyBugComponent } from './components/approve-deny-bug/approve-deny-bug.component';
 import { ApproveDenyItemComponent } from './components/approve-deny-item/approve-deny-item.component';
+import { BugReportFormComponent } from './components/bug-report-form/bug-report-form.component';
 
 @NgModule({
   declarations: [
@@ -23,14 +24,15 @@ import { ApproveDenyItemComponent } from './components/approve-deny-item/approve
     HomeComponent,
     LeaderboardComponent,
     ApproveDenyBugComponent,
-    ApproveDenyItemComponent
+    ApproveDenyItemComponent,
+    BugReportFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
-
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]
