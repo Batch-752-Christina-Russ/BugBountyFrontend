@@ -37,6 +37,8 @@ export class BugReportFormComponent implements OnInit {
     
   }
 
+  public isHidden = true;
+
   //submit bug report method
   submitBugReport(){
     let roles1:Role = new Role(1, "user");
@@ -52,5 +54,6 @@ export class BugReportFormComponent implements OnInit {
                                   new Date(),
                                   "pending");
     this.bugReportService.submitBugReport(this.bugReport);
+    this.isHidden = false;
   }
 }

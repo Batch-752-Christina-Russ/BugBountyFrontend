@@ -1,5 +1,6 @@
 
-
+<div class="panel">
+  <div class="panel-heading"><h3 class="panel-title">Submit New Bug Report</h3></div>
 <form class="container" (ngSubmit)="submitBugReport()" [formGroup]="bugFormFG">
     <div class="form-group">
       <label for="appname">Project Name:</label>
@@ -33,3 +34,5 @@
     <button type="submit"  class="btn btn-primary">Submit</button>
 
   </form>
+  <div *ngIf="!isHidden" class="success-message">Bug report submitted successfully!</div>
+</div>

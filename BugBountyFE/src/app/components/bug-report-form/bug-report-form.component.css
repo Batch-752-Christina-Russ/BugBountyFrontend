@@ -1,0 +1,28 @@
+.panel {
+    margin-top:92px;  
+    background-color: #B9B9BA;   
+    margin-left:5%;
+    margin-right:5%;
+    text-align:center;
+    font-size:25px;
+}
+
+.panel-heading {
+    background-color: #474C55;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.form-control{
+    font-size: 25px;
+}
+
+.btn{
+    font-size: 25px;
+}
+
+.success-message{
+    background-color: #F26925;
+}
