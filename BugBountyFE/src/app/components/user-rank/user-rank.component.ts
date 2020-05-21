@@ -19,6 +19,7 @@ export class UserRankComponent implements OnInit {
 
   getUserRank(userName: String){
       this.userService.getRank(userName).subscribe(data => {this.userRank = data}, () => {console.log("Error: user rank cannot be obtained")});
+      console.log(this.userRank);
     }
 
 }
