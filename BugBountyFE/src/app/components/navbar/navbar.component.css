@@ -1,6 +1,6 @@
 nav{
     height: 92px;
-    background-color: gray;
+    background-color: #72A4C2;
 }
 
 #tbarLogo{
@@ -11,7 +11,7 @@ nav{
 }
 
 #tbarLogo>img{
-    height: 100px;
+    height: 85px;
     width: 350px;
 }
 

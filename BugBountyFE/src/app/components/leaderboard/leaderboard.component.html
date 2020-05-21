@@ -1,4 +1,8 @@
-<table>
+<div class = "panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Leaderboard</h3>
+    </div>
+<table class = "table table-hover">
     <thead>
         <tr>
             <th>
@@ -12,6 +16,7 @@
             </th>
         </tr>
     </thead>
+    <div class="panel-body">
     <tbody>
         <tr *ngFor='let user of topTenList; let i = index'>
             <td>
@@ -25,4 +30,6 @@
             </td>
         </tr>
     </tbody>
+    </div>
 </table>
+</div>
