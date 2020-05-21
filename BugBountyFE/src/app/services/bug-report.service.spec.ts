@@ -76,4 +76,5 @@ describe('BugReportService', () => {
       req.flush(mockBugReport);
     });
   });
+
 });
