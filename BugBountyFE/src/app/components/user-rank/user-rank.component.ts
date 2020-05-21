@@ -13,7 +13,6 @@ export class UserRankComponent implements OnInit {
 
   ngOnInit(): void {
     this.userName = sessionStorage.getItem('username');
-    //this.userName = "new";
     this.getUserRank(this.userName);
   }
 

@@ -4,6 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { ApproveDenyBugComponent } from './components/approve-deny-bug/approve-deny-bug.component';
+import { ResolveComponent } from './components/resolve/resolve.component';
+import { LeaderboardComponent } from './components/leaderboard/leaderboard.component';
 import { BugReportFormComponent } from './components/bug-report-form/bug-report-form.component';
 import { OpenBugsComponent } from './components/open-bugs/open-bugs.component';
 import { LeaderboardComponent } from './components/leaderboard/leaderboard.component';
@@ -17,7 +19,8 @@ const routes: Routes = [
   {path:"bug-report-form", component:BugReportFormComponent},
   {path : 'open', component:OpenBugsComponent},
   {path: 'leaderboard', component:LeaderboardComponent},
-  {path: 'rank', component:UserRankComponent}
+  {path: 'rank', component:UserRankComponent},
+  { path: 'resolvebug', component:ResolveComponent },
 ];
 
 @NgModule({
