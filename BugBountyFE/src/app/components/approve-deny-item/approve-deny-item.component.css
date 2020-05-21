@@ -1,0 +1,33 @@
+.card {
+    margin-bottom: 15px;
+    height:50vh;
+}
+/* .steps{
+    background-color: lightgray;
+    margin-bottom: 1px;
+}
+
+.cards{
+    float: left;    
+    height: 70vh;
+    margin-bottom: 10px;
+}
+
+.cards-shadow{
+    box-shadow: 1px 1px 6px lightslategrey;
+} */
+
+#card-btn{
+    float: left;
+    padding:4px;
+    text-align: left;
+    background-color: lightgray;
+}
+
+#card-btn>button{
+     margin-right: 10px;
+}
+
+.modal-body{
+    overflow-wrap: break-word;
+}

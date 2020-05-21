@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { NavbarService } from 'src/app/services/navbar.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router:Router, 
+    private navbarService: NavbarService
+    ) { }
+    
+  cRole:String;
 
   ngOnInit(): void {
+    this.navbarService.currentcRole.subscribe(cRole => this.cRole = cRole);
+  }
+
+  logout():void{
+    sessionStorage.clear();
+    this.navbarService.changeRole(sessionStorage.getItem('Role'));
+    this.router.navigate(['index']);
   }
 
 }
