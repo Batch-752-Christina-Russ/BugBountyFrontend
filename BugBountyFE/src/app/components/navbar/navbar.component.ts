@@ -8,7 +8,7 @@ import { NavbarService } from 'src/app/services/navbar.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
+  clicked:string;
   constructor(
     private router:Router, 
     private navbarService: NavbarService
@@ -20,7 +20,12 @@ export class NavbarComponent implements OnInit {
     this.navbarService.currentcRole.subscribe(cRole => this.cRole = cRole);
   }
 
+  setClicked(navItem:string){
+    this.clicked = navItem;
+  }
+
   logout():void{
+    this.clicked = '';
     sessionStorage.clear();
     this.navbarService.changeRole(sessionStorage.getItem('Role'));
     this.router.navigate(['index']);
