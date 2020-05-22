@@ -31,13 +31,18 @@ export class BugReportFormComponent implements OnInit {
     severity: new FormControl('', Validators.required),
   });
 
-  constructor(http:HttpClient, private bugReportService : BugReportService, private router:Router) { }
+  constructor(
+      private bugReportService : BugReportService,
+      private router:Router
+      ) { }
 
   ngOnInit(): void {
-
-    this.reporter = sessionStorage.getItem("Username");   
-    this.severityDisplay = this.severityOptions.getSeverity();
-    
+    let checker = sessionStorage.getItem('Role');
+    if(!checker){
+      this.router.navigate(['']);
+    }
+    this.reporter = sessionStorage.getItem("Username"); 
+    this.severityDisplay = this.severityOptions.getSeverity(); 
   }
 
   public isHidden = true;

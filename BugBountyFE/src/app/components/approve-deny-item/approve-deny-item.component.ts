@@ -3,6 +3,7 @@ import { BugReport } from 'src/app/models/BugReport';
 import { BugReportService } from 'src/app/services/bug-report.service';
 import { EventEmitter } from 'protractor';
 import { type } from 'os';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-approve-deny-item',
@@ -13,9 +14,12 @@ export class ApproveDenyItemComponent implements OnInit {
 
   @Input() bugReport:BugReport;
   @ViewChild('card') card:ElementRef;
-  constructor(private brs:BugReportService) { }
+  constructor(
+    private brs:BugReportService
+    ) { }
 
   ngOnInit(): void {
+    
   }
 
   approve():void{
