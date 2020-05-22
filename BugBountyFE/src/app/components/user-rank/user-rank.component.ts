@@ -13,12 +13,12 @@ export class UserRankComponent implements OnInit {
 
   ngOnInit(): void {
     this.userName = sessionStorage.getItem('username');
-    //this.userName = "new";
     this.getUserRank(this.userName);
   }
 
   getUserRank(userName: String){
       this.userService.getRank(userName).subscribe(data => {this.userRank = data}, () => {console.log("Error: user rank cannot be obtained")});
+      console.log(this.userRank);
     }
 
 }

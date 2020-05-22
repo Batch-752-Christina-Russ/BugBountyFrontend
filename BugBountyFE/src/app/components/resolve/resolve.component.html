@@ -1,0 +1,13 @@
+<p>resolve works!</p>
+<form> 
+    <label>
+        Bug Id:
+        <input type="number" id="bugId" #bugId>
+    </label>
+    <label>
+        Username:
+        <input type="text" id="username" #username>
+    </label>
+
+    <button (click)="resolveBug(bugId.value, username.value); bugId.value=''; username.value=''; ">Resolve</button>
+</form>

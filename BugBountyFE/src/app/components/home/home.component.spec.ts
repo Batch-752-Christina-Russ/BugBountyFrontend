@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { HomeComponent } from './home.component';
+import { OpenBugsComponent } from '../open-bugs/open-bugs.component';
+import { LeaderboardComponent } from '../leaderboard/leaderboard.component';
+import { Router, RouterModule } from '@angular/router';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -8,7 +10,9 @@ describe('HomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomeComponent ]
+      declarations: [ HomeComponent ],
+      imports: [RouterModule],
+      providers: [Router]
     })
     .compileComponents();
   }));
@@ -19,7 +23,15 @@ describe('HomeComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should display open bugs', () => {
+      expect(this.OpenBugsComponent).toBeInstanceOf(OpenBugsComponent);
   });
+
+  it('should display the leaderboard', () => {
+    expect(this.LeaderboardComponent).toBeInstanceOf(LeaderboardComponent);   
+  });
+
+  it('should redirect to login'), () => {
+    expect(this.component.loginRedirect).toHaveBeenCalled();
+  }
 });

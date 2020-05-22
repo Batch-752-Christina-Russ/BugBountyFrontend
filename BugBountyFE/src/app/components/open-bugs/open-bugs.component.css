@@ -1,4 +1,6 @@
-
+html{
+    background-color: #B9B9BA;
+}
 .panel-heading {
     /* text-align: center;
     padding: 0 auto;
@@ -11,7 +13,9 @@
     color: white;
     padding: 20px;
     text-align: center;
-    font-size: 30px;   
+    font-size: 30px;
+
+    
 }
 
  h3{
@@ -23,3 +27,7 @@
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
     }
+
+
+
+
