@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
 
   public message :boolean = false;
 
-  constructor(private http: HttpClient, 
+  constructor( 
               private loginService: LoginService, 
               private router:Router,
               private navbarService: NavbarService
@@ -55,6 +55,10 @@ export class LoginComponent implements OnInit {
  
 
   ngOnInit(): void {
+    let checker = sessionStorage.getItem('Role');
+    if(checker){
+      this.router.navigate(['home']);
+    }
     this.navbarService.currentcRole.subscribe(cRole => this.cRole = cRole);
   }
 
