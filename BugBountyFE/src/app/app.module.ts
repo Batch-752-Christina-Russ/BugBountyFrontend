@@ -14,6 +14,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LeaderboardComponent } from './components/leaderboard/leaderboard.component';
 import { ApproveDenyBugComponent } from './components/approve-deny-bug/approve-deny-bug.component';
 import { ApproveDenyItemComponent } from './components/approve-deny-item/approve-deny-item.component';
+import { ResolveComponent } from './components/resolve/resolve.component';
 import { BugReportFormComponent } from './components/bug-report-form/bug-report-form.component';
 import { OpenBugsComponent } from './components/open-bugs/open-bugs.component';
 import { OpenBugsItemComponent } from './components/open-bugs-item/open-bugs-item.component';
@@ -29,6 +30,7 @@ import { OpenBugsItemComponent } from './components/open-bugs-item/open-bugs-ite
     LeaderboardComponent,
     ApproveDenyBugComponent,
     ApproveDenyItemComponent,
+    ResolveComponent,
     BugReportFormComponent,
     OpenBugsComponent,
     OpenBugsItemComponent

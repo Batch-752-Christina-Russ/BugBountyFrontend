@@ -1,6 +1,6 @@
 
 
-<form class="container" (ngSubmit)="submitBugReport()" [formGroup]="bugFormFG">
+<form class="container" (ngSubmit)="submitBugReport()" [formGroup]="bugFormFG" >
     <div class="form-group">
       <label for="appname">Project Name:</label>
       <input formControlName="name" type="text" class="form-control" id="appname" required>
@@ -30,6 +30,8 @@
         </select>
       </div>
 
-    <button type="submit"  class="btn btn-primary">Submit</button>
+    <button type="submit" [disabled]="!bugFormFG.valid"  class="btn btn-primary">Submit</button>
 
+    <div *ngIf="message" id="submit-success" class="alert alert-success">You have succesfully submitted a bug. Redirecting you to the homepage.</div> 
+    <div *ngIf="errorMessage" id="submit-failed" class="alert alert-danger">Submission failed.</div> 
   </form>

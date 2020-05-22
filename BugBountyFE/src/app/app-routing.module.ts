@@ -8,6 +8,7 @@ import { BugReportFormComponent } from './components/bug-report-form/bug-report-
 import { OpenBugsComponent } from './components/open-bugs/open-bugs.component';
 import { LeaderboardComponent } from './components/leaderboard/leaderboard.component';
 import { UserRankComponent } from './components/user-rank/user-rank.component';
+import { ResolveComponent } from './components/resolve/resolve.component';
 
 const routes: Routes = [
   { path: '', redirectTo:'index', pathMatch: 'full' },
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path:"bug-report-form", component:BugReportFormComponent},
   {path : 'open', component:OpenBugsComponent},
   {path: 'leaderboard', component:LeaderboardComponent},
-  {path: 'rank', component:UserRankComponent}
+  {path: 'rank', component:UserRankComponent},
+  { path: 'resolvebug', component:ResolveComponent },
 ];
 
 @NgModule({

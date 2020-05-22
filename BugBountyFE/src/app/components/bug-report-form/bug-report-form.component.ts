@@ -6,6 +6,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Severity } from 'src/app/models/Severity';
 import { User } from 'src/app/models/User';
 import { Role } from 'src/app/models/Role';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -20,6 +21,9 @@ export class BugReportFormComponent implements OnInit {
   bugReport:BugReport; 
   severityOptions:Severity = new Severity();
   severityDisplay: {};  
+  reporter:string;
+  message:boolean;
+  errorMessage:boolean;
 
   bugFormFG = new FormGroup({
     name: new FormControl('', Validators.required),
@@ -29,20 +33,19 @@ export class BugReportFormComponent implements OnInit {
     severity: new FormControl('', Validators.required),
   });
 
-  constructor(http:HttpClient, private bugReportService : BugReportService) { }
+  constructor(http:HttpClient, private bugReportService : BugReportService, private router:Router) { }
 
   ngOnInit(): void {
-       
+
+    this.reporter = sessionStorage.getItem("Username");   
     this.severityDisplay = this.severityOptions.getSeverity();
     
   }
 
   //submit bug report method
   submitBugReport(){
-    let roles1:Role = new Role(1, "user");
-    let roles2:Role = new Role(2, "admin");
-    let user1:User = new User(0,"user1", "p1", 0, roles1);
-    let user2:User = new User(1, "user2", "p2", 0, roles2);
+    let user1:User = new User(undefined, this.reporter, "", 0, new Role(undefined, ""));
+    let user2:User = null;
     this.bugReport = new BugReport(0, user1, user2, 
                                   this.bugFormFG.get('name').value, 
                                   this.bugFormFG.get('location').value,
@@ -51,6 +54,18 @@ export class BugReportFormComponent implements OnInit {
                                   this.bugFormFG.get('severity').value,
                                   new Date(),
                                   "pending");
-    this.bugReportService.submitBugReport(this.bugReport);
+    this.bugReportService.submitBugReport(this.bugReport).subscribe(result => {
+        this.message = true;
+        setTimeout(() =>
+        {
+          this.router.navigate(['home']);
+        },
+        3000);
+    },
+    error => {
+      this.errorMessage = true;
+    });
+
+    
   }
 }

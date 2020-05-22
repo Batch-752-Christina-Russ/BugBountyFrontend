@@ -35,11 +35,9 @@ export class LoginComponent implements OnInit {
     this.loginService.login(this.username, this.password)
       .subscribe(
         result => {
-          console.log(result);
           if(result == null){
             this.message = true;
           }else{      
-            console.log(result);
             //sessionStorage.setItem("id", result.id.toString());
             sessionStorage.setItem("Username", result.username);
             sessionStorage.setItem("Role", result.role.name); 
