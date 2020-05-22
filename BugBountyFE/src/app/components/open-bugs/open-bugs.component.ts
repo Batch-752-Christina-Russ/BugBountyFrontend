@@ -16,44 +16,36 @@ import { OpenBugsItemComponent } from '../open-bugs-item/open-bugs-item.componen
 
 export class OpenBugsComponent implements OnInit {
 
-  constructor(private bugService : OpenBugsService, private datePipe: DatePipe) { }
+  constructor(private bugService: OpenBugsService, private datePipe: DatePipe) { }
 
-  
+
 
   ngOnInit(): void {
 
     this.viewOpenBugs();
 
-    // this.inputBugReport();
-  }
-  
-  
-  BugReports : BugReport[];
-
- //Dummy data!!
-  inputBugReport(){
-  let roles1:Role = new Role(1, "user");
-  let roles2:Role = new Role(2, "admin");
-  let user1:User = new User(0,"user1", "p1", 0, roles1);
-  let user2:User = new User(1, "user2", "p2", 0, roles2);
-  this.BugReports = [new BugReport(0, user1, user2, "asdf", "asdf", "asf", "asd", "asdf", new Date(), "open")];
   }
 
-  
-    viewOpenBugs(){
-      this.bugService.viewOpenBugs().subscribe(
-        (data) =>{
-          console.log(data);
-          console.log(data[0]);
-          this.BugReports = data; 
-        },
-        () => {
-          console.log("There was an error grabbing your bug reports!");
-        }
-      )
 
-    }
+  BugReports: BugReport[];
 
-  
+
+
+
+  viewOpenBugs() {
+    this.bugService.viewOpenBugs().subscribe(
+      (data) => {
+        console.log(data);
+        console.log(data[0]);
+        this.BugReports = data;
+      },
+      () => {
+        console.log("There was an error grabbing your bug reports!");
+      }
+    )
+
   }
+
+
+}
 
