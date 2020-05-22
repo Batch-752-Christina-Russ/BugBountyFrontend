@@ -11,7 +11,10 @@ export class HomeComponent implements OnInit {
   constructor(private router : Router) { }
 
   ngOnInit(): void {
-    // this.loginRedirect();
+    let checker = sessionStorage.getItem('Role');
+    if(!checker){
+      this.router.navigate(['']);
+    }
     }
 
   loginRedirect(){
@@ -22,6 +25,4 @@ export class HomeComponent implements OnInit {
       this.router.navigate(['login']);
     }
   }
-
-
 }

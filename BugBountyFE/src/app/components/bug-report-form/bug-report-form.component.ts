@@ -6,6 +6,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Severity } from 'src/app/models/Severity';
 import { User } from 'src/app/models/User';
 import { Role } from 'src/app/models/Role';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -29,10 +30,16 @@ export class BugReportFormComponent implements OnInit {
     severity: new FormControl('', Validators.required),
   });
 
-  constructor(http:HttpClient, private bugReportService : BugReportService) { }
+  constructor(
+      private bugReportService : BugReportService,
+      private router:Router
+      ) { }
 
   ngOnInit(): void {
-       
+    let checker = sessionStorage.getItem('Role');
+    if(!checker){
+      this.router.navigate(['']);
+    }
     this.severityDisplay = this.severityOptions.getSeverity();
     
   }
