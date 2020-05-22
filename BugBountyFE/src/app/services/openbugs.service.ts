@@ -14,7 +14,7 @@ export class OpenBugsService{
 
   viewOpenBugs(): Observable<BugReport[]>{
     return this.http.get(
-      "/bugreport/open"
+      "http://localhost:8080/bugreport/open"
     ) as Observable<BugReport[]>
   }
 
