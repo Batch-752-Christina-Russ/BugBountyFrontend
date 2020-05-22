@@ -22,20 +22,12 @@ export class OpenBugsComponent implements OnInit {
 
     this.viewOpenBugs();
 
-    // this.inputBugReport();
   }
 
 
   BugReports: BugReport[];
 
-  //Dummy data!!
-  inputBugReport() {
-    let roles1: Role = new Role(1, "user");
-    let roles2: Role = new Role(2, "admin");
-    let user1: User = new User(0, "user1", "p1", 0, roles1);
-    let user2: User = new User(1, "user2", "p2", 0, roles2);
-    this.BugReports = [new BugReport(0, user1, user2, "asdf", "asdf", "asf", "asd", "asdf", new Date(), "open")];
-  }
+
 
 
   viewOpenBugs() {
