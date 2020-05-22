@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'home', component:HomeComponent },
   { path: 'index', component:LoginComponent },
   { path: 'pendingbug', component:ApproveDenyBugComponent },
-  {path:"bug-report-form", component:BugReportFormComponent},
+  {path: "reportbug", component:BugReportFormComponent},
   {path : 'open', component:OpenBugsComponent},
   {path: 'leaderboard', component:LeaderboardComponent},
   {path: 'rank', component:UserRankComponent},
