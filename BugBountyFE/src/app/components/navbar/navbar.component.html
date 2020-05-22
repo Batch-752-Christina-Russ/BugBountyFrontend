@@ -1,21 +1,21 @@
 <nav class="navbar navbar-expand-lg nav-link-white nav">
   <a routerLink="/home"><img style="height: 4rem;"src="./assets/img/bt logo header.png" (click)="setClicked('/home')"></a>        
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" attr.aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" attr.aria-expanded="false" aria-label="Toggle navigation" id="homenav">
       <span class="navbar-toggler-icon"></span>
     </button>        
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item" *ngIf="cRole=='admin'" [ngClass]="{'active': clicked=='/resolvebug'}">
-        <a class="nav-link" (click)="setClicked('/resolvebug')" routerLink="/resolvebug"><b>Resolve Reports </b></a>
+        <a class="nav-link" (click)="setClicked('/resolvebug')" routerLink="/resolvebug" id="resolvenav"><b>Resolve Reports </b></a>
       </li>
       <li class="nav-item" *ngIf="cRole=='admin'" [ngClass]="{'active': clicked=='/pendingbug'}">
-        <a class="nav-link" (click)="setClicked('/pendingbug')" routerLink="/pendingbug"><b>Pending Reports</b></a>
+        <a class="nav-link" (click)="setClicked('/pendingbug')" routerLink="/pendingbug" id="pendingnav"><b>Pending Reports</b></a>
       </li>
       <li class="nav-item" *ngIf='cRole' [ngClass]="{'active': clicked=='/reportbug'}">
-        <a class="nav-link" (click)="setClicked('/reportbug')" routerLink="/reportbug"><b>Report Bug</b></a>
+        <a class="nav-link" (click)="setClicked('/reportbug')" routerLink="/reportbug" id="reportnav"><b>Report Bug</b></a>
       </li>
       <li class="nav-item" *ngIf='cRole'>
-        <a class="nav-link" style="cursor:pointer;"(click)="logout()"><b>Logout</b></a>
+        <a class="nav-link" style="cursor:pointer;"(click)="logout()" id="logoutnav"><b>Logout</b></a>
       </li>
     </ul>
   </div>
