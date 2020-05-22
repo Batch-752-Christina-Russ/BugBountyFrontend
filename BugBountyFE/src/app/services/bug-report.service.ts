@@ -42,12 +42,10 @@ export class BugReportService {
   //Submit Bug Report
   submitBugReport(bugreport:BugReport) {
     //make http header
-    let header = new HttpHeaders().set('Content-Type', 'application/json');
+    //let header = new HttpHeaders().set('Content-Type', 'application/json');
     console.log(JSON.stringify(bugreport));
-    this.http.post('http://localhost:8080/bugreport/new', JSON.stringify(bugreport), {headers:header}).subscribe(
-      () => { console.log("successful submit");},
-      () => { console.log("failed submission");}
-    );//end observable
+    return this.http.post('http://localhost:8080/bugreport/save', JSON.stringify(bugreport), {headers: new HttpHeaders({'Content-Type':  'application/json',})});
+    
   }
 
   
