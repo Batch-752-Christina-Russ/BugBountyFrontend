@@ -1,0 +1,19 @@
+.card {
+    margin-bottom: 15px;
+    height:50vh;
+}
+
+#card-btn{
+    float: left;
+    padding:4px;
+    text-align: left;
+    background-color: lightgray;
+}
+
+#card-btn>button{
+     margin-right: 10px;
+}
+
+.modal-body{
+    overflow-wrap: break-word;
+}

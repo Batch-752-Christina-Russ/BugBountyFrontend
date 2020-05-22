@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { BugReportService } from 'src/app/services/bug-report.service';
-import { BugReport } from 'src/app/models/BugReport';
+import { HttpClient } from '@angular/common/http';
+import { BugReportService } from '../../services/bug-report.service';
+import { BugReport } from '../../models/BugReport';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { Severity } from 'src/app/models/Severity';
-import { User } from 'src/app/models/User';
-import { Role } from 'src/app/models/Role';
+import { Severity } from '../../models/Severity';
+import { User } from '../../models/User';
+import { Role } from '../../models/Role';
 import { Router } from '@angular/router';
 
 
@@ -14,8 +15,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./bug-report-form.component.css']
 })
 export class BugReportFormComponent implements OnInit {
-
-
 
   bugReport:BugReport; 
   severityOptions:Severity = new Severity();
@@ -46,6 +45,8 @@ export class BugReportFormComponent implements OnInit {
     this.severityDisplay = this.severityOptions.getSeverity(); 
   }
 
+  public isHidden = true;
+
   //submit bug report method
   submitBugReport(){
     let user1:User = new User(undefined, this.reporter, "", 0, new Role(undefined, ""));
@@ -58,6 +59,7 @@ export class BugReportFormComponent implements OnInit {
                                   this.bugFormFG.get('severity').value,
                                   new Date(),
                                   "pending");
+
     this.bugReportService.submitBugReport(this.bugReport).subscribe(result => {
         this.message = true;
         setTimeout(() =>
@@ -69,7 +71,5 @@ export class BugReportFormComponent implements OnInit {
     error => {
       this.errorMessage = true;
     });
-
-    
   }
 }
