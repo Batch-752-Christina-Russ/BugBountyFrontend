@@ -3,70 +3,11 @@
     <div class="panel-heading">
         <h3 class="panel-title">Open Bugs</h3>
     </div>
-<table class = "table table-hover">
-    <thead>
-        <tr>
-            <th>
-                ID
-            </th>
-            <th>
-                Reporter
-            </th>
-            <th>
-                Application
-            </th>
-            <th>
-                Location
-            </th>
-            <th>
-                Description
-            </th>
-            <th>
-                Steps
-            </th>
-            <th>
-                Severity
-            </th>
-            <th>
-                Date
-            </th>
-            <th >
-                Details
-            </th>
-        </tr>
-    </thead>
-    <div class="panel-body">
-    <tbody>
-        <tr *ngFor="let Bug of BugReports">
-            <td>
-                {{Bug.id}}
-            </td>
-            <td>
-                {{Bug.reporter.username}}
-            </td>
-            <td>
-                {{Bug.application}}
-            </td>
-            <td>
-                {{Bug.location}}
-            </td>
-            <td>
-                {{Bug.description}}
-            </td>
-            <td>
-                {{Bug.steps}}
-            </td>
-            <td>
-                {{Bug.severity}}
-            </td>
-            <td>
-            {{Bug.date | date:'yyyy-MM-dd'}}
-            </td>
-            <td>
-                {{Bug.status}}
-            </td>
-        </tr>
-    </tbody>
-    </div>
-</table>
+    <div class="container">
+        <div class="row">
+           <div *ngFor="let bugReport of BugReports | keyvalue" class="col-sm-4"> 
+                 <app-open-bugs-item [bugReport]="bugReport.value"> </app-open-bugs-item> 
+           </div>      
+        </div>
+     </div> 
 </div>
