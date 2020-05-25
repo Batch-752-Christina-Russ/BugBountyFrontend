@@ -35,8 +35,6 @@ export class OpenBugsComponent implements OnInit {
   viewOpenBugs() {
     this.bugService.viewOpenBugs().subscribe(
       (data) => {
-        console.log(data);
-        console.log(data[0]);
         this.BugReports = data;
       },
       () => {
