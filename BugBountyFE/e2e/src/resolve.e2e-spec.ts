@@ -22,7 +22,7 @@ describe('Resolve page', () => {
   it('should have a button for submitting', () => {
       expect(page.getButton().isPresent()).toBeTruthy();
   })
-
+  
   afterEach(async () => {
     // Assert that there are no errors emitted from the browser
     const logs = await browser.manage().logs().get(logging.Type.BROWSER);
