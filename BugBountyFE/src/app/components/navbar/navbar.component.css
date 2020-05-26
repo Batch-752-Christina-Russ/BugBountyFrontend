@@ -5,7 +5,7 @@ nav{
     color:#eeeeee
 }
 .nav-link-white .navbar-nav .active > .nav-link{
-    color: #1b93f3 !important;
+    color: #ff6000 !important;
 }
 .nav-link-white .navbar-toggler {
     color: rgba(255, 255, 255, 0.5);
