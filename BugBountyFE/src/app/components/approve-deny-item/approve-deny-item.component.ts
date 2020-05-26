@@ -25,7 +25,6 @@ export class ApproveDenyItemComponent implements OnInit {
   approve():void{
     this.bugReport.status = 'open';
     this.brs.resolve(this.bugReport).subscribe(res => {
-      console.log("resolved and deleting")
       this.removeFromClient();
     },err => {
       console.log('Error');
