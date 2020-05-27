@@ -18,13 +18,13 @@
     </thead>
     <tbody>
         <tr *ngFor='let user of topTenList; let i = index'>
-            <td>
+            <td id="rank-{{i+1}}">
                 {{i + 1}}
             </td>
             <td>
                 {{user.username}}
             </td>
-            <td>
+            <td id="points-{{i+1}}">
                 {{user.points}}
             </td>
         </tr>
